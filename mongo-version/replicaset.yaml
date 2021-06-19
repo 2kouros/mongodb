@@ -1,0 +1,21 @@
+---
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: my-mongo-replica
+spec:
+  members: 3
+  version: "4.0.16-ent"
+  opsManager:
+    configMapRef:
+      name: my-configmap
+            
+  credentials: organization-key
+  type: ReplicaSet
+  persistent: true
+  connectivity:
+    replicaSetHorizons:
+      - "my-mongo-replica": "34.118.59.176:27017"
+      - "my-mongo-replica": "34.118.9.168:27017"
+      - "my-mongo-replica": "34.118.17.0:27017"
+...
