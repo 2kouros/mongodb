@@ -14,6 +14,7 @@ spec:
   type: ReplicaSet
   persistent: true
   connectivity:
+    #TODO TLS
     replicaSetHorizons:
       - "my-mongo-replica": "34.118.59.176:27017"
       - "my-mongo-replica": "34.118.9.168:27017"
