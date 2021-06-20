@@ -15,11 +15,6 @@ spec:
         environment: test
         replicaset: MainRepSet
     spec:
-      opsManager:
-        configMapRef:
-          name: my-configmap         
-      credentials: organization-key
-      
       terminationGracePeriodSeconds: 10
       containers:
         - name: mongod-container
